@@ -8,7 +8,7 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: eu-fastapi
+    runs-on: emre-eu
     permissions:
       contents: read
       packages: write
