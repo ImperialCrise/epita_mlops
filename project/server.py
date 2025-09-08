@@ -1,6 +1,6 @@
 import joblib
 from fastapi import FastAPI
-model = joblib.load('../regression.joblib')
+model = joblib.load('./regression.joblib')
 
 app = FastAPI(host="0.0.0.0", port=8000)
 
