@@ -13,4 +13,4 @@ def predict(size: float, nb_rooms: float, garden: float):
 
 @app.get("/")
 def home():
-    return "Hello, World!d"
+    return "Hello, World! PrivilegedLab"
