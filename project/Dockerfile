@@ -13,6 +13,6 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-EXPOSE 8000
+EXPOSE 5858
 
-CMD ["fastapi", "run", "server.py", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["fastapi", "run", "server.py", "--host", "0.0.0.0", "--port", "5858"]

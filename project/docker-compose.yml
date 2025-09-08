@@ -5,7 +5,7 @@ services:
     build: .
     container_name: eu-fastapi
     ports:
-      - "8000:8000"
+      - "5858:5858"
     environment:
       - PYTHONUNBUFFERED=1
     restart: unless-stopped
