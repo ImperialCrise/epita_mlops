@@ -2,7 +2,7 @@ import joblib
 from fastapi import FastAPI
 model = joblib.load('./regression.joblib')
 
-app = FastAPI(host="0.0.0.0", port=8000)
+app = FastAPI(host="0.0.0.0", port=6050)
 
 @app.post("/predict")
 def predict(size: float, nb_rooms: float, garden: float):
