@@ -1,1 +1,24 @@
 
+name: Deploy fastapi
+
+on:
+  push:
+    branches: [main]
+    paths: ['**']
+
+jobs:
+  build-and-deploy:
+    runs-on: eu-fastapi
+    permissions:
+      contents: read
+      packages: write
+    steps:
+    - name: Deploy to eu-fastapi
+      run: |
+        cd /home/ubuntu/eu/epita_mlops/project
+        git reset --hard HEAD
+        git clean -fd
+        git fetch origin
+        git reset --hard origin/main
+        git pull
+        docker compose up -d --build
